@@ -1,0 +1,6 @@
+joinfaces:
+  primefaces:
+    theme: bootstrap
+
+server:
+  port: 8181
