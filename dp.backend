@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl.auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/DP?useUnicode=true&serverTimezone=Europe/Moscow&useSSL=false
+    username: postgres
+    password:
+    driverClassName: org.postgresql.Driver
+  mvc:
+    servlet:
+      path: /api
+server:
+  port: 0
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
